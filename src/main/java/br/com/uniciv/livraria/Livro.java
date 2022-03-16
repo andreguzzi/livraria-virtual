@@ -24,7 +24,7 @@ public class Livro {
 	@XmlElement
 	private Double preco;
 	@XmlElement
-	private List<Autor> autores = new ArrayList<Autor>();
+	private List<Autor> autor = new ArrayList<Autor>();
 	
 	public Livro() { }
 
@@ -43,7 +43,7 @@ public class Livro {
 		this.preco = preco;
 		
 		for (String autor : autores) {
-			this.autores.add(new Autor(autor));
+			this.autor.add(new Autor(autor));
 		}
 	}
 
@@ -78,13 +78,22 @@ public class Livro {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-
-	public List<Autor> getAutores() {
-		return autores;
+	
+	
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setAutores(List<Autor> autores) {
-		this.autores = autores;
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public List<Autor> getAutor() {
+		return autor;
+	}
+
+	public void setAutor(List<Autor> autor) {
+		this.autor = autor;
 	}
 
 }
